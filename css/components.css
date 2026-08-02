@@ -1,0 +1,365 @@
+/* ========================================
+   MODAL / POPUP PAYMENT
+   ======================================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--card-light);
+    border-radius: var(--radius-lg);
+    max-width: 520px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    animation: modalSlide 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.dark-mode .modal-content {
+    background: var(--card-dark);
+    border-color: var(--border-dark);
+}
+
+@keyframes modalSlide {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.05);
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    z-index: 10;
+    transition: var(--transition);
+}
+
+.dark-mode .modal-close {
+    background: rgba(255,255,255,0.1);
+    color: var(--text-dark);
+}
+
+.modal-close:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.modal-body {
+    padding: 40px 32px;
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dark-mode .payment-header {
+    border-color: var(--border-dark);
+}
+
+.payment-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.dark-mode .payment-header h3 {
+    color: var(--text-dark);
+}
+
+.payment-header .payment-price {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.payment-methods {
+    margin-bottom: 28px;
+}
+
+.payment-methods h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-light);
+}
+
+.dark-mode .payment-methods h4 {
+    color: var(--text-dark);
+}
+
+.payment-method {
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+
+.dark-mode .payment-method {
+    background: var(--bg-dark);
+    border-color: var(--border-dark);
+}
+
+.payment-method:hover {
+    border-color: var(--primary);
+}
+
+.payment-method-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.payment-method-header i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.payment-method-header span {
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.dark-mode .payment-method-header span {
+    color: var(--text-dark);
+}
+
+.qris-image {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+.dark-mode .qris-image {
+    border-color: var(--border-dark);
+}
+
+.copy-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-light-alt);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+}
+
+.dark-mode .copy-box {
+    background: rgba(255,255,255,0.05);
+    border-color: var(--border-dark);
+}
+
+.copy-box span {
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.dark-mode .copy-box span {
+    color: var(--text-dark);
+}
+
+.btn-copy {
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-copy:hover {
+    background: var(--primary-hover);
+}
+
+.btn-copy.copied {
+    background: #10B981;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-light);
+}
+
+.dark-mode .upload-section {
+    border-color: var(--border-dark);
+}
+
+.upload-section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-light);
+}
+
+.dark-mode .upload-section h4 {
+    color: var(--text-dark);
+}
+
+.upload-area {
+    border: 2px dashed var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 40px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--bg-light);
+}
+
+.dark-mode .upload-area {
+    border-color: var(--border-dark);
+    background: var(--bg-dark);
+}
+
+.upload-area:hover,
+.upload-area.dragover {
+    border-color: var(--primary);
+    background: rgba(37, 99, 235, 0.05);
+}
+
+.dark-mode .upload-area:hover,
+.dark-mode .upload-area.dragover {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.upload-area i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.upload-area p {
+    color: var(--text-light-muted);
+    font-size: 0.95rem;
+}
+
+.dark-mode .upload-area p {
+    color: var(--text-dark-muted);
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+.upload-preview {
+    margin-top: 16px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+}
+
+.dark-mode .upload-preview {
+    border-color: var(--border-dark);
+}
+
+.upload-preview img {
+    width: 100%;
+    display: block;
+}
+
+.upload-actions {
+    margin-top: 20px;
+}
+
+.upload-note {
+    font-size: 0.85rem;
+    color: var(--text-light-muted);
+    margin-top: 12px;
+    text-align: center;
+}
+
+.dark-mode .upload-note {
+    color: var(--text-dark-muted);
+}
+
+.upload-note i {
+    color: #10B981;
+}
+
+/* WhatsApp Contact */
+.wa-contact {
+    margin-top: 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    border-radius: var(--radius-md);
+    color: #fff;
+    text-align: center;
+}
+
+.wa-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    opacity: 0.95;
+}
+
+.btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: #fff;
+    color: #128C7E;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-wa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

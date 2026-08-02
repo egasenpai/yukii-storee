@@ -1,0 +1,31 @@
+/* ========================================
+   DARK MODE SPECIFIC OVERRIDES
+   ======================================== */
+
+/* Smooth transition for all themed elements */
+body, .navbar, .section-alt, .footer,
+.category-card, .product-card, .feature-card,
+.modal-content, .payment-box {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Dark mode scrollbar */
+.dark-mode ::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+    border-radius: 5px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
