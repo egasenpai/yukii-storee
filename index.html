@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuki Store — Dashboard</title>
+    <link rel="icon" href="https://yuki-regal.vercel.app/Yuki1785667118790.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://yuki-regal.vercel.app/Yuki1785667118790.jpg" alt="Yuki Store">
+                <span>Yuki Store</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="panel.html">Panel Pterodactyl</a></li>
+                <li><a href="sewa-bot.html">Sewa Bot</a></li>
+                <li><a href="script.html">Script Yuki</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="https://yuki-regal.vercel.app/Yuki1785667034534.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in-up">Selamat Datang di Yuki Store</h1>
+            <p class="hero-subtitle fade-in-up delay-1">Produk Digital Terbaik dengan Harga Terjangkau</p>
+            <a href="#categories" class="btn btn-primary fade-in-up delay-2">
+                Jelajahi Produk <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kategori Produk</h2>
+                <p class="section-desc">Pilih produk digital sesuai kebutuhanmu</p>
+            </div>
+            <div class="grid grid-3">
+                <a href="panel.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Panel Pterodactyl</h3>
+                    <p>Panel server game dengan berbagai pilihan RAM mulai dari 1GB hingga Unlimited.</p>
+                    <span class="category-link">Lihat Produk <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="sewa-bot.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Sewa Bot & Premium</h3>
+                    <p>Bot WhatsApp canggih dan akses premium eksklusif untuk pengalaman terbaik.</p>
+                    <span class="category-link">Lihat Produk <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="script.html" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Script Yuki AI</h3>
+                    <p>Script bot WhatsApp modern dengan 1000+ fitur siap pakai dan free update.</p>
+                    <span class="category-link">Lihat Produk <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kenapa Yuki Store?</h2>
+            </div>
+            <div class="grid grid-4">
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Proses Cepat</h4>
+                    <p>Pengiriman produk instan setelah pembayaran dikonfirmasi.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Aman & Terpercaya</h4>
+                    <p>Transaksi aman dengan sistem pembayaran yang terintegrasi.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>Support 24/7</h4>
+                    <p>Tim support siap membantu kapan saja kamu butuhkan.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tags"></i>
+                    <h4>Harga Terbaik</h4>
+                    <p>Harga kompetitif dengan kualitas produk yang tidak diragukan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://yuki-regal.vercel.app/Yuki1785667118790.jpg" alt="Yuki Store">
+                    <span>Yuki Store</span>
+                    <p>Toko produk digital terpercaya untuk kebutuhan server, bot, dan script WhatsApp.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="panel.html">Panel Pterodactyl</a></li>
+                        <li><a href="sewa-bot.html">Sewa Bot</a></li>
+                        <li><a href="script.html">Script Yuki</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="fab fa-whatsapp"></i> 6288246387665</p>
+                    <p><i class="fas fa-envelope"></i> support@yukistore.id</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yuki Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

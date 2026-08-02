@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa Bot & Premium — Yuki Store</title>
+    <link rel="icon" href="https://yuki-regal.vercel.app/Yuki1785667118790.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="https://yuki-regal.vercel.app/Yuki1785667118790.jpg" alt="Yuki Store">
+                <span>Yuki Store</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="panel.html">Panel Pterodactyl</a></li>
+                <li><a href="sewa-bot.html" class="active">Sewa Bot</a></li>
+                <li><a href="script.html">Script Yuki</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section page-header">
+        <div class="container">
+            <h1 class="page-title">Sewa Bot & Premium</h1>
+            <p class="page-desc">Bot WhatsApp canggih dan akses premium eksklusif.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2">
+                <!-- Bot Card -->
+                <div class="product-card product-card-large">
+                    <div class="product-badge-row">
+                        <span class="badge badge-bot"><i class="fas fa-robot"></i> BOT</span>
+                    </div>
+                    <div class="product-icon-large"><i class="fas fa-robot"></i></div>
+                    <h3 class="product-name">Jasa Sewa Bot Yuki AI</h3>
+                    <p class="product-desc">Bot WhatsApp Canggih dengan fitur lengkap dan respons cepat.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 1000+ Command Aktif</li>
+                        <li><i class="fas fa-check"></i> Auto Reply Cerdas</li>
+                        <li><i class="fas fa-check"></i> Support Group & Private</li>
+                        <li><i class="fas fa-check"></i> Update Fitur Berkala</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-item">
+                            <span class="price-label">Bulanan</span>
+                            <span class="price-value">Rp 15.000</span>
+                            <button class="btn btn-outline buy-btn" data-name="Sewa Bot Yuki AI - Bulanan" data-price="15000">Beli Bulanan</button>
+                        </div>
+                        <div class="price-divider"></div>
+                        <div class="price-item">
+                            <span class="price-label">Permanen</span>
+                            <span class="price-value">Rp 80.000</span>
+                            <button class="btn btn-primary buy-btn" data-name="Sewa Bot Yuki AI - Permanen" data-price="80000">Beli Permanen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Card -->
+                <div class="product-card product-card-large">
+                    <div class="product-badge-row">
+                        <span class="badge badge-premium"><i class="fas fa-crown"></i> PREMIUM</span>
+                    </div>
+                    <div class="product-icon-large"><i class="fas fa-crown"></i></div>
+                    <h3 class="product-name">Premium User Bot Yuki</h3>
+                    <p class="product-desc">Akses Premium Eksklusif untuk pengalaman menggunakan bot tanpa batas.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Akses Fitur Premium</li>
+                        <li><i class="fas fa-check"></i> Limit Unlimited</li>
+                        <li><i class="fas fa-check"></i> Prioritas Support</li>
+                        <li><i class="fas fa-check"></i> Badge Premium Eksklusif</li>
+                    </ul>
+                    <div class="price-row">
+                        <div class="price-item">
+                            <span class="price-label">Bulanan</span>
+                            <span class="price-value">Rp 5.000</span>
+                            <button class="btn btn-outline buy-btn" data-name="Premium User Bot Yuki - Bulanan" data-price="5000">Beli Bulanan</button>
+                        </div>
+                        <div class="price-divider"></div>
+                        <div class="price-item">
+                            <span class="price-label">Permanen</span>
+                            <span class="price-value">Rp 50.000</span>
+                            <button class="btn btn-primary buy-btn" data-name="Premium User Bot Yuki - Permanen" data-price="50000">Beli Permanen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yuki Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="paymentModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
