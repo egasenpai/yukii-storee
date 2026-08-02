@@ -28,8 +28,5 @@
             "src": "/(.*)",
             "dest": "/$1"
         }
-    ],
-    "env": {
-        "GITHUB_TOKEN_YUKI": "@github-token"
-    }
+    ]
 }
